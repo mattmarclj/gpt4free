@@ -42,7 +42,7 @@ class Bing(AsyncGeneratorProvider):
         messages: Messages,
         proxy: str = None,
         cookies: dict = None,
-        tone: str = Tones.creative,
+        tone: str = Tones.precise,
         image: str = None,
         web_search: bool = False,
         **kwargs

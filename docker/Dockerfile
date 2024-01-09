@@ -33,9 +33,9 @@ RUN if [ "$G4F_VERSION" = "" ] ; then \
 # Python packages
 RUN apt-get -qqy update \
   && apt-get -qqy install \
-    python3 \
-    python-is-python3 \
-    pip
+  python3 \
+  python-is-python3 \
+  pip
 
 # Remove java
 RUN apt-get -qyy remove openjdk-11-jre-headless
@@ -88,3 +88,6 @@ ADD --chown=$G4F_USER:$G4F_USER g4f $G4F_DIR/g4f
 
 # Expose ports
 EXPOSE 8080 1337
+
+COPY CA-BrightData.crt /usr/local/share/ca-certificates/
+RUN sudo update-ca-certificates
