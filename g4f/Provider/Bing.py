@@ -33,7 +33,7 @@ class Bing(AsyncGeneratorProvider):
         proxy: str = None,
         timeout: int = 900,
         cookies: dict = None,
-        tone: str = Tones.creative,
+        tone: str = Tones.precise,
         image: str = None,
         web_search: bool = False,
         **kwargs
